@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoWindow from './photowindow';
 
 const photos = [
   { src: '/photo1.jpg', size: 'h-96' },
@@ -23,14 +24,12 @@ const Gallery = () => {
   const numRows = photos.length / 3;
 
   return (
-    <section id="gallery" className="my-12">
+    <section id="gallery" className="my-12 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-6">Gallery</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Create 3 horizontal strips */}
           {[...Array(numRows)].map((_, rowIndex) => (
             <div key={rowIndex} className="flex flex-col space-y-6">
-              {/* Inner columns */}
               {[0, 1, 2].map((colIndex) => (
                 <div
                   key={rowIndex * 3 + colIndex}
@@ -47,7 +46,9 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+      {/* <div className="line-animation"></div> */}
     </section>
+
   );
 };
 

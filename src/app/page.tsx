@@ -5,7 +5,8 @@ import Prefooter from './components/prefooter';
 import Projects from './components/projects';
 import Gallery from './components/gallery';
 import People from './components/people';
-
+import ProjectsCarousel from './components/sales';
+import PhotoWindow from './components/photowindow';
 
 const images = [
     '/services.jpg',
@@ -23,8 +24,10 @@ export default function Home(){
         <About/>
         <Projects/>
         <Services images = {images}/>
+        {/* <PhotoWindow/> */}
         <Gallery/>
         <People/>
+        <ProjectsCarousel/>
         <Prefooter/>
     </section>
     )

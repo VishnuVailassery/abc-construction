@@ -1,0 +1,41 @@
+/* components/ProjectsCarousel.module.css */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tile {
+  position: relative;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.tile:hover {
+  transform: translateY(-10px);
+  width: 40%;
+}
+
+.tile:hover .longDescription {
+  display: block;
+}
+
+.longDescription {
+  display: none;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
