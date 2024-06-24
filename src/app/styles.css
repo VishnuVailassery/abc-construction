@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.projects-scroll {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.projects-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.projects-container {
+    display: flex;
+    gap: 1rem;
+    /* for spacing between items */
+}
+
+.project-item {
+    flex: 0 0 auto;
+    width: 300px;
+    /* adjust as needed */
+    scroll-snap-align: center;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: blue;
+}
+
+.dot.bg-blue-500 {
+    background-color: blue;
+}
+
+.dot.bg-gray-400 {
+    background-color: gray;
+}
+
+/* styles/globals.css (or any relevant CSS file) */
+#about {
+    margin-top: 0;
+    /* Ensure no margin at the top of the section */
+}
+
+.background-image-container {
+    background-image: url('/about.JPG');
+    transition: background-image 0.3s ease;
+}
+
+.background-image-container:hover {
+    background-image: url('/about-hover.jpg');
+    /* Path to the hover image */
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .stick-man, .house {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .stick-man {
+    left: 0;
+    width: 50px;
+    height: 150px;
+    animation: walk 5s linear infinite;
+  }
+  
+  .head {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  
+  .body {
+    width: 4px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    top: 30px;
+    left: 23px;
+  }
+  
+  .arm-left, .arm-right {
+    width: 4px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 40px;
+  }
+  
+  .arm-left {
+    left: 0;
+    transform: rotate(45deg);
+  }
+  
+  .arm-right {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+  
+  .leg-left, .leg-right {
+    width: 4px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 90px;
+  }
+  
+  .leg-left {
+    left: 10px;
+    transform: rotate(-45deg);
+  }
+  
+  .leg-right {
+    right: 10px;
+    transform: rotate(45deg);
+  }
+  
+  .house {
+    width: 200px;
+    height: 200px;
+    right: 0;
+    bottom: 0;
+    border: 2px solid black;
+  }
+  
+  .roof {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid black;
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+  
+  .wall {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .door {
+    width: 50px;
+    height: 80px;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+  }
+  
+  @keyframes walk {
+    0% { left: 0; }
+    100% { left: calc(100% - 50px); }
+  }
+
